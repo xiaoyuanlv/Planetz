@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MainFragment"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/dark_bg"
+        android:scaleType="fitXY"
+        android:rotation="180"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lnTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:fontFamily="@font/roboto"
+            android:textSize="17sp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/logo"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imgbtnInfo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:id="@+id/rcyPlanet"
+        android:layout_marginTop="40dp"
+        />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardSortz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            tools:ignore="RelativeOverlap">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/lnSort"
+                >
+
+                <info.androidhive.fontawesome.FontTextView
+                    android:id="@+id/ftvSort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fa_sort_numeric_up_solid"
+                    app:solid_icon="true"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:src="@mipmap/planet_arrow"
+                    android:rotation="180"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgSort"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/diameter"
+                    android:scaleType="fitCenter"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="11sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorAccent"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rlFilter"
+        android:layout_below="@id/cardSortz"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <info.androidhive.fontawesome.FontTextView
+            android:id="@+id/ftvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fa_shapes_solid"
+            app:solid_icon="true"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFilterStatus"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="10dp"
+            android:layout_alignParentTop="true"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

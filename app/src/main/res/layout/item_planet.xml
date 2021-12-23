@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="210dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rlPlanet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="10dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                >
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgPlanet"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/mercury" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPlanet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/titlefont"
+                        android:textSize="17sp"
+                        android:text="Mercury"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@id/imgPlanet"
+                        android:layout_toRightOf="@id/imgPlanet"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgIndicator"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:scaleType="fitStart"
+                        android:src="@mipmap/indicator"
+                        android:layout_below="@id/txtPlanet"
+                        android:layout_toEndOf="@id/imgPlanet"
+                        android:layout_toRightOf="@id/imgPlanet"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/lnDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_toEndOf="@id/imgPlanet"
+                        android:layout_toRightOf="@id/imgPlanet"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/imgIndicator"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/distance"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/titlefont"
+                            android:textSize="15sp"
+                            android:text="2 km"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnDiameter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_toEndOf="@id/imgPlanet"
+                        android:layout_toRightOf="@id/imgPlanet"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/lnDistance"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/diameter"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="11dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDiameter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/titlefont"
+                            android:textSize="15sp"
+                            android:text="2 km"
+                            android:layout_gravity="center_vertical"
+                            />
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/planet_arrow"
+                        android:scaleType="fitCenter"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

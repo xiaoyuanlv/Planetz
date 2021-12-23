@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/logo"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:id="@+id/bar_home"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/imgHome"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorAccent"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSun"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/sun"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:id="@+id/bar_sun"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/imgSun"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgMoon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/moon"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:id="@+id/bar_moon"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/imgMoon"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPlanetGP"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/planet_gp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:id="@+id/bar_fav"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/imgPlanetGP"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFact"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/planet_fact"
+                android:layout_centerHorizontal="true"
+                />
+
+            <View
+                android:id="@+id/bar_fact"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_below="@id/imgFact"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <include layout="@layout/item_moon" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Age "
+                    android:fontFamily="@font/titlefont"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/moon_triangle"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.527 Billion Years"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnDiameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/lnAge"
+                >
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Diameter "
+                    android:fontFamily="@font/titlefont"
+                    android:layout_gravity="center"
+                    />
+
+                 <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/moon_triangle"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    />
+
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtDiameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3,475 km"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnMass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/lnDiameter"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Mass "
+                    android:fontFamily="@font/titlefont"
+                    android:layout_gravity="center"
+                    />
+
+                 <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/moon_triangle"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    />
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtMass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="73,476,730,924,573,500 million kg (0.0123 x Earth)"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnEquator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/lnMass"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Circumference at equator "
+                    android:fontFamily="@font/titlefont"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="3sp"
+                    />
+
+                 <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/moon_triangle"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    />
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCircumferenceEquator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10,917.0 km"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="17sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/lnEquator"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Surface temperature"
+                    android:fontFamily="@font/titlefont"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="3sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/moon_triangle"
+                    android:rotation="90"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    />
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-233 to 123 °C"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="17sp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

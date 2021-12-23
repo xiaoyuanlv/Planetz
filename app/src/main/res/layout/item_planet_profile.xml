@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/lnPlanetProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="mass"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMass"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Equatorial diameter"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEquatorDiameter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Polar diameter"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPolarDiameter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Equatorial circumference"
+            android:lineSpacingExtra="3sp"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEquatorCircumference"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Known moons"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtKnownMoons"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Notable moons"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNotableMoons"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Orbit distance"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri7"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtOrbitDistance"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Orbit period"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri8"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtOrbitPeriod"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Surface temperature"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri9"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSurfaceTemp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="First record"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri10"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFirstRecord"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/titlefont"
+            android:gravity="center"
+            android:text="Recorded by"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tri11"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mars_triangle"
+            android:rotation="90"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtRecordedBy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:fontFamily="@font/roboto"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="3sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/mars_color"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="bottom"
+        />
+
+</LinearLayout>
