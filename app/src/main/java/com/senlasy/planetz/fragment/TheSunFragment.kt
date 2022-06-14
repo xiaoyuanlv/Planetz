@@ -15,8 +15,6 @@ import com.senlasy.planetz.R
 import com.senlasy.planetz.adapter.SunFactAdapter
 import com.senlasy.planetz.database.DBHelper
 import com.senlasy.planetz.model.SunFacts
-import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 
 private const val ARG_TITLE = "title"
 
@@ -64,7 +62,7 @@ class TheSunFragment : Fragment() {
         imgInfoStatus = view.findViewById(R.id.imgInfoStatus)
         imgSunFactStatus = view.findViewById(R.id.imgSunFactStatus)
         rcySunFact = view.findViewById(R.id.rcySunFact)
-        rcySunFact.layoutManager = LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+        rcySunFact.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
 
         rlSunCard = view.findViewById(R.id.rlSunCard)
 
@@ -131,7 +129,7 @@ class TheSunFragment : Fragment() {
     }
 
     fun getData() {
-        var dbHelper = DBHelper(activity!!)
+        var dbHelper = DBHelper(requireContext())
         val thesun = dbHelper.getTheSun()
         if(thesun != null) {
             txtAge.text = thesun.the_age.toString()
@@ -144,9 +142,9 @@ class TheSunFragment : Fragment() {
 
         val thesunfacts = dbHelper.getSunFacts()
         if(thesunfacts.isNotEmpty()){
-            var factAdapter = SunFactAdapter(thesunfacts.toMutableList(), R.layout.item_fact, activity!!)
+            var factAdapter = SunFactAdapter(thesunfacts.toMutableList(), R.layout.item_fact, requireContext())
             factAdapter.setOnItemListener(object : SunFactAdapter.OnItemClickListener{
-                override fun onFavItemClick(item: SunFacts, view: FontTextView) {
+                override fun onFavItemClick(item: SunFacts, view: TextView) {
 
                 }
 

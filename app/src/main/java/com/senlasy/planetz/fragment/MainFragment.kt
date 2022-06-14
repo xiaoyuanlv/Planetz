@@ -13,8 +13,6 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
-import androidx.core.app.ActivityOptionsCompat
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.senlasy.Stringz.adapter.FilterAdapter
@@ -25,7 +23,6 @@ import com.senlasy.planetz.adapter.PlanetAdapter
 import com.senlasy.planetz.database.DBHelper
 import com.senlasy.planetz.model.Planet
 import com.senlasy.planetz.model.PlanetCategory
-import info.androidhive.fontawesome.FontTextView
 import java.lang.Exception
 
 private const val ARG_TITLE = "TITLE"
@@ -39,11 +36,11 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
 
     lateinit var rcyPlanet : RecyclerView
 
-    lateinit var ftvSort : FontTextView
+    lateinit var ftvSort : TextView
     lateinit var lnSort : LinearLayout
     lateinit var imgSort : ImageView
 
-    lateinit var ftvCategory : FontTextView
+    lateinit var ftvCategory : TextView
     lateinit var rlFilter : RelativeLayout
     lateinit var cardFilterStatus  : CardView
 
@@ -78,7 +75,7 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
 
 
         rcyPlanet = view.findViewById(R.id.rcyPlanet)
-        rcyPlanet.layoutManager = LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+        rcyPlanet.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
         ftvSort = view.findViewById(R.id.ftvSort)
         lnSort = view.findViewById(R.id.lnSort)
         imgSort = view.findViewById(R.id.imgSort)
@@ -90,13 +87,13 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
         imgbtnInfo.setOnClickListener {
             try {
 
-                val viewGroup: ViewGroup = activity!!.findViewById(android.R.id.content)
+                val viewGroup: ViewGroup = requireActivity().findViewById(android.R.id.content)
                 val dialogView: View = LayoutInflater.from(activity).inflate(R.layout.app_info_dialog, viewGroup, false)
 
 
                 val btnClose = dialogView.findViewById<Button>(R.id.btnClose)
 
-                val alertDialog = AlertDialog.Builder(activity!!).setView(dialogView).create()
+                val alertDialog = AlertDialog.Builder(requireContext()).setView(dialogView).create()
 
 
                 btnClose.setOnClickListener {
@@ -114,18 +111,18 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
 
         rlFilter.setOnClickListener {
             showFilterDialog("Category")
-            ftvCategory.setTextColor(activity!!.resources.getColor(R.color.colorAccent, null))
+            ftvCategory.setTextColor(requireContext().resources.getColor(R.color.colorAccent, null))
             Handler().postDelayed(Runnable {
-                ftvCategory.setTextColor(activity!!.resources.getColor(android.R.color.white, null))
+                ftvCategory.setTextColor(requireActivity().resources.getColor(android.R.color.white, null))
             }, 1000)
         }
 
 
         lnSort.setOnClickListener {
             showFilterDialog("SortBy")
-            ftvSort.setTextColor(activity!!.resources.getColor(R.color.colorAccent, null))
+            ftvSort.setTextColor(requireContext().resources.getColor(R.color.colorAccent, null))
             Handler().postDelayed(Runnable {
-                ftvSort.setTextColor(activity!!.resources.getColor(android.R.color.white, null))
+                ftvSort.setTextColor(requireContext().resources.getColor(android.R.color.white, null))
             }, 1000)
         }
 
@@ -163,7 +160,7 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
     }
 
     fun getData() {
-        var dbHelper = DBHelper(activity!!)
+        var dbHelper = DBHelper(requireContext())
 
         if(filterCategory > 0) {
             lstPlanet = dbHelper.getPlanetByCategory(filterCategory, sortBy).toMutableList()
@@ -174,7 +171,7 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
     }
 
     fun getPlanetCategory() {
-        val dbHelper = DBHelper(activity!!)
+        val dbHelper = DBHelper(requireContext())
         if(lstCategory.size == 0) {
             lstCategory = dbHelper.getAllPlanetCategory().toMutableList()
         }
@@ -198,29 +195,29 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
     fun setAdapter(){
         rcyPlanet.adapter = null
         adapter = null
-        adapter = PlanetAdapter(lstPlanet!!, R.layout.item_planet, activity!!, rcyPlanet)
+        adapter = PlanetAdapter(lstPlanet!!, R.layout.item_planet, requireContext(), rcyPlanet)
         adapter!!.setOnItemListener(this)
         rcyPlanet.adapter = adapter
 
     }
 
     override fun onItemClick(item: Planet, view: View) {
-        activity!!.finish()
+        requireActivity().finish()
 
-        val intent = Intent(activity!!, DetailActivity::class.java)
+        val intent = Intent(requireContext(), DetailActivity::class.java)
          intent.putExtra("planet", item)
-        activity!!.startActivity(intent)
+        requireContext().startActivity(intent)
     }
 
 
     private fun showFilterDialog(title: String){
         try {
 
-            val viewGroup: ViewGroup = activity!!.findViewById(android.R.id.content)
+            val viewGroup: ViewGroup = requireActivity().findViewById(android.R.id.content)
             val dialogView: View = LayoutInflater.from(activity).inflate(R.layout.dialog_filter, viewGroup, false)
 
             val rcyList : RecyclerView = dialogView.findViewById(R.id.rcyList)
-            rcyList.layoutManager = LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+            rcyList.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
 
             val btnClose = dialogView.findViewById<Button>(R.id.btnClose)
             val btnClearFilter = dialogView.findViewById<Button>(R.id.btnClearFilter)
@@ -229,7 +226,7 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
             val txtSelectedTitle = dialogView.findViewById<TextView>(R.id.txtSelectedTitle)
             txtTitle.text = title
 
-            val alertDialog = AlertDialog.Builder(activity!!).setView(dialogView).create()
+            val alertDialog = AlertDialog.Builder(requireContext()).setView(dialogView).create()
 
             var filterArr : MutableList<String> = ArrayList()
             if(title.equals("SortBy", true)){
@@ -265,7 +262,7 @@ class MainFragment : Fragment(), PlanetAdapter.OnItemClickListener {
                 }
             }
 
-            val filterAdapter = FilterAdapter(filterArr, R.layout.item_filter, activity!!)
+            val filterAdapter = FilterAdapter(filterArr, R.layout.item_filter, requireContext())
             rcyList.adapter = filterAdapter
             filterAdapter.setOnItemListener(object : FilterAdapter.OnItemClickListener{
                 override fun onItemClick(item: String, view: View, position :Int) {

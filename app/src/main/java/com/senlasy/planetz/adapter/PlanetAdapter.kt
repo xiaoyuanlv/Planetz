@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.senlasy.planetz.R
 import com.senlasy.planetz.model.Planet
 import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 import org.w3c.dom.Text
 
 class PlanetAdapter(

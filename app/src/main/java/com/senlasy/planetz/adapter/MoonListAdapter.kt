@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.senlasy.planetz.R
 import com.senlasy.planetz.model.Moons
 import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 
 class MoonListAdapter  (
     var ItemList: MutableList<Moons>,
@@ -89,7 +88,7 @@ class MoonListAdapter  (
         internal var txtYear : TextView
 
         internal var imgPlanetDistance : ImageView
-        internal var ftvPlanetDistance  : FontTextView
+        internal var ftvPlanetDistance  : TextView
         internal var txtPlanetDistance  : TextView
         internal var txtDiameter : TextView
         internal var txtOrbitalPeriod : TextView
@@ -114,7 +113,7 @@ class MoonListAdapter  (
             rlContent.setOnClickListener {
                 // lnMoons.setBackgroundColor(context.resources.getColor(PlanetImgHelper.getColorbyPlanetID(item.id), null))
                 focusedItem = layoutPosition
-                listener!!.onItemClick(item, it)
+               // listener!!.onItemClick(item, it)
             }
 
         }

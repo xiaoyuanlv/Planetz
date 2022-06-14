@@ -92,12 +92,12 @@
                 android:id="@+id/lnSort"
                 >
 
-                <info.androidhive.fontawesome.FontTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/ftvSort"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/fa_sort_numeric_up_solid"
-                    app:solid_icon="true"
+                    android:fontFamily="@font/fwsome6solid"
                     android:textSize="15sp"
                     android:layout_gravity="center_horizontal"
                     />
@@ -138,12 +138,12 @@
         android:layout_marginRight="10dp"
         >
 
-        <info.androidhive.fontawesome.FontTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ftvCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fa_shapes_solid"
-            app:solid_icon="true"
+            android:fontFamily="@font/fwsome6solid"
             android:textSize="20sp"
             android:layout_centerInParent="true"
             />

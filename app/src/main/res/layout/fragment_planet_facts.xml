@@ -46,11 +46,11 @@
             android:textColor="@color/colorPrimary"
             />
 
-        <info.androidhive.fontawesome.FontTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fa_list_solid"
-            app:solid_icon="true"
+           android:fontFamily="@font/fwsome6solid"
             android:textSize="20sp"
             android:layout_marginStart="7dp"
             android:textColor="@color/colorPrimary"

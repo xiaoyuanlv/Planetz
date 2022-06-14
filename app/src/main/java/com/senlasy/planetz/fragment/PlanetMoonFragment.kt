@@ -17,7 +17,6 @@ import com.senlasy.planetz.adapter.MoonListAdapter
 import com.senlasy.planetz.database.DBHelper
 import com.senlasy.planetz.model.Planet
 import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 import org.w3c.dom.Text
 
 private const val ARG_PLANET = "planet"
@@ -63,8 +62,8 @@ class PlanetMoonFragment : Fragment() {
         txtTemperature = view.findViewById(R.id.txtTemperature)
         txtEmpty = view.findViewById(R.id.txtEmpty)
 
-        bar.setBackgroundColor(activity!!.resources.getColor(PlanetImgHelper.getColorbyPlanetID(planet!!.id), null))
-        rcyMoon.layoutManager = LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+        bar.setBackgroundColor(requireActivity().resources.getColor(PlanetImgHelper.getColorbyPlanetID(planet!!.id), null))
+        rcyMoon.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
 
         return view
     }
@@ -106,7 +105,7 @@ class PlanetMoonFragment : Fragment() {
 
     fun getData() {
 
-        var dbHelper = DBHelper(activity!!)
+        var dbHelper = DBHelper(requireActivity())
         if(planet!!.id == 3){
             rlTheMoon.visibility = View.VISIBLE
             val themoon = dbHelper.getTheMoon()
@@ -123,7 +122,7 @@ class PlanetMoonFragment : Fragment() {
                 mainView.findViewById<TextView>(R.id.txtTitle).text = moonList[0].title
                 mainView.findViewById<TextView>(R.id.txtYear).text =  moonList[0].discovered
                 mainView.findViewById<ImageView>(R.id.imgPlanetDistance).setImageResource(PlanetImgHelper.getImageByPlanetID(moonList[0].planet_id))
-                mainView.findViewById<TextView>(R.id.ftvPlanetDistance).setTextColor(activity!!.resources.getColor(PlanetImgHelper.getColorbyPlanetID(moonList[0].planet_id) , null))
+                mainView.findViewById<TextView>(R.id.ftvPlanetDistance).setTextColor(requireActivity().resources.getColor(PlanetImgHelper.getColorbyPlanetID(moonList[0].planet_id) , null))
                 mainView.findViewById<TextView>(R.id.txtPlanetDistance).text =  moonList[0].distance
                 mainView.findViewById<TextView>(R.id.txtDiameter).text =  moonList[0].diameter
                 mainView.findViewById<TextView>(R.id.txtOrbitalPeriod).text =  moonList[0].orbital_period
@@ -138,7 +137,7 @@ class PlanetMoonFragment : Fragment() {
             rlTheMoon.visibility = View.GONE
             val moonList = dbHelper.getMoonsList(planet!!.id)
             if(moonList.isNotEmpty()) {
-                val moonAdapter = MoonListAdapter(moonList.toMutableList(), R.layout.item_moon, activity!!)
+                val moonAdapter = MoonListAdapter(moonList.toMutableList(), R.layout.item_moon, requireActivity())
                 rcyMoon.adapter= moonAdapter
                 rcyMoon.visibility  = View.VISIBLE
                 txtEmpty.visibility = View.GONE

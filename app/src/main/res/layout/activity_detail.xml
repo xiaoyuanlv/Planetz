@@ -39,11 +39,11 @@
                 android:layout_margin="10dp"
                 />
 
-            <info.androidhive.fontawesome.FontTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fa_arrow_left_solid"
-                app:solid_icon="true"
+                android:fontFamily="@font/fwsome6solid"
                 android:textColor="@color/colorPrimary"
                android:layout_centerInParent="true"
                 />

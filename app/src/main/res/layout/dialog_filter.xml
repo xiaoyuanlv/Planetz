@@ -59,10 +59,9 @@
                 android:id="@+id/rcyList"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:background="@android:color/transparent"
-                android:padding="10dp"
                 android:layout_below="@id/imgLogo"
-                />
+                android:background="@android:color/transparent"
+                android:padding="10dp" />
 
 
             <LinearLayout

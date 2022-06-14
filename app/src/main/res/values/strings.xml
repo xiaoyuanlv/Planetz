@@ -3,4 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fa_arrow_left_solid">\uf0a8</string>
+    <string name="fa_search_solid">\uf002</string>
+    <string name="fa_sort_numeric_up_solid">\uf163</string>
+    <string name="fa_shapes_solid">\uf61f</string>
+    <string name="fa_list_solid">\uf03a</string>
+    <string name="fa_info_circle_solid">\uf05a</string>
+    <string name="fa_star_solid">\uf005</string>
+    <string name="fa_binoculars_solid">\uf1e5</string>
+    <string name="fa_arrows_alt_h_solid"></string>
 </resources>

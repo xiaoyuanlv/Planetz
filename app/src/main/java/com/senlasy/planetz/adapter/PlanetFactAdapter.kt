@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.senlasy.planetz.R
 import com.senlasy.planetz.model.PlanetFacts
 import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 
 class PlanetFactAdapter (
     var ItemList: MutableList<PlanetFacts>,
@@ -32,7 +31,7 @@ class PlanetFactAdapter (
 
     public interface OnItemClickListener {
         fun onItemClick(item: PlanetFacts, view : View)
-        fun onFavItemClick(item : PlanetFacts, view : FontTextView)
+        fun onFavItemClick(item : PlanetFacts, view : TextView)
     }
 
     fun changeLayout(rowLayout : Int){
@@ -88,7 +87,7 @@ class PlanetFactAdapter (
         internal var cardContent: CardView
         internal var txtDescription: TextView
         internal var imgPlanet : ImageView
-        internal var ftvStar : FontTextView
+        internal var ftvStar : TextView
         internal var cardFactBg : CardView
 
 

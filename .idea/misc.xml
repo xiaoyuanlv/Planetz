@@ -9,17 +9,18 @@
         <entry key="app/src/main/res/layout/app_info_dialog.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/bottom_layout.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/detail_bottom.xml" value="0.15572916666666667" />
+        <entry key="app/src/main/res/layout/dialog_filter.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_facts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fav.xml" value="0.15572916666666667" />
-        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.15572916666666667" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_planet_detatil.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_planet_facts.xml" value="0.15572916666666667" />
+        <entry key="app/src/main/res/layout/fragment_planet_facts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_planet_moon.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/fragment_the_moon.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/fragment_the_sun.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/item_fact.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/item_filter.xml" value="0.15572916666666667" />
-        <entry key="app/src/main/res/layout/item_moon.xml" value="0.15572916666666667" />
+        <entry key="app/src/main/res/layout/item_filter.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_moon.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_planet.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_planet_icon.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/item_planet_profile.xml" value="0.34320491595535835" />

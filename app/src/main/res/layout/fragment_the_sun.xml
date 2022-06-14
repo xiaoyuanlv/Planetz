@@ -76,12 +76,12 @@
             android:layout_height="match_parent"
             android:background="@drawable/black_button" />
 
-        <info.androidhive.fontawesome.FontTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ftvCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fa_info_circle_solid"
-            app:solid_icon="true"
+            android:fontFamily="@font/fwsome6solid"
             android:textSize="15sp"
             android:layout_centerInParent="true"
             />
@@ -112,12 +112,12 @@
             android:layout_height="match_parent"
             android:background="@drawable/black_button" />
 
-        <info.androidhive.fontawesome.FontTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ftvCategory2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fa_list_solid"
-            app:solid_icon="true"
+           android:fontFamily="@font/fwsome6solid"
             android:textSize="15sp"
             android:layout_centerInParent="true"
             />

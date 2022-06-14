@@ -10,7 +10,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.senlasy.planetz.R
 import com.senlasy.planetz.model.SunFacts
-import info.androidhive.fontawesome.FontTextView
 
 class SunFactAdapter  (
     var ItemList: MutableList<SunFacts>,
@@ -30,7 +29,7 @@ class SunFactAdapter  (
 
     public interface OnItemClickListener {
         fun onItemClick(item: SunFacts, view : View)
-        fun onFavItemClick(item : SunFacts, view : FontTextView)
+        fun onFavItemClick(item : SunFacts, view : TextView)
     }
 
     fun changeLayout(rowLayout : Int){
@@ -86,7 +85,7 @@ class SunFactAdapter  (
         internal var cardContent: CardView
         internal var txtDescription: TextView
         internal var imgPlanet : ImageView
-        internal var ftvStar : FontTextView
+        internal var ftvStar : TextView
         internal var cardFactBg : CardView
 
 

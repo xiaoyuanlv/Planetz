@@ -21,7 +21,6 @@ import com.senlasy.planetz.database.DBHelper
 import com.senlasy.planetz.model.Planet
 import com.senlasy.planetz.model.PlanetFacts
 import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 import java.lang.Exception
 
 
@@ -53,7 +52,7 @@ class FactsFragment : Fragment() {
         var view = inflater.inflate(R.layout.fragment_facts, container, false)
 
         rcyList = view.findViewById(R.id.rcyList)
-        rcyList.layoutManager = LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+        rcyList.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
         txtEmpty = view.findViewById(R.id.txtEmpty)
         imgbtnFilter = view.findViewById(R.id.imgbtnFilter)
         imgFilterPlanet = view.findViewById(R.id.imgFilterPlanet)
@@ -103,20 +102,20 @@ class FactsFragment : Fragment() {
     fun showFilterDialog() {
 
         try {
-            var dbHelper = DBHelper(activity!!)
+            var dbHelper = DBHelper(requireContext())
             var planetList = dbHelper.getAllPlanet("distance")
 
             if (planetList.isNotEmpty()) {
 
-                var planetIconAdapter = PlanetIconAdapter(planetList.toMutableList(), R.layout.item_planet_icon, activity!!)
+                var planetIconAdapter = PlanetIconAdapter(planetList.toMutableList(), R.layout.item_planet_icon, requireContext())
 
-                val viewGroup: ViewGroup = activity!!.findViewById(android.R.id.content)
+                val viewGroup: ViewGroup = requireActivity().findViewById(android.R.id.content)
                 val dialogView: View =
                     LayoutInflater.from(activity).inflate(R.layout.dialog_filter, viewGroup, false)
 
                 val rcyList: RecyclerView = dialogView.findViewById(R.id.rcyList)
                 rcyList.layoutManager =
-                    LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+                    LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
                 rcyList.adapter = planetIconAdapter
 
                 val btnClose = dialogView.findViewById<Button>(R.id.btnClose)
@@ -134,7 +133,7 @@ class FactsFragment : Fragment() {
 
                 txtTitle.text = "Choose ~"
 
-                val alertDialog = AlertDialog.Builder(activity!!).setView(dialogView).create()
+                val alertDialog = AlertDialog.Builder(requireContext()).setView(dialogView).create()
 
                 planetIconAdapter.setOnItemListener(object : PlanetIconAdapter.OnItemClickListener{
                     override fun onItemClick(item: Planet, view: View) {
@@ -170,12 +169,12 @@ class FactsFragment : Fragment() {
 
     fun getData() {
 
-        var dbHelper = DBHelper(activity!!)
+        var dbHelper = DBHelper(requireContext())
         var lstList = dbHelper.getPlanetFact(filterPlanetId)
-        var adapter = PlanetFactAdapter(lstList.toMutableList(), R.layout.item_fact, activity!!)
+        var adapter = PlanetFactAdapter(lstList.toMutableList(), R.layout.item_fact, requireContext())
 
         adapter.setOnItemListener(object : PlanetFactAdapter.OnItemClickListener{
-            override fun onFavItemClick(item: PlanetFacts, view: FontTextView) {
+            override fun onFavItemClick(item: PlanetFacts, view: TextView) {
                 val dbHelper2 = DBHelper(activity!!)
 
                 if(item.fav == 1){

@@ -18,7 +18,6 @@ import com.senlasy.planetz.database.DBHelper
 import com.senlasy.planetz.model.Planet
 import com.senlasy.planetz.model.PlanetFacts
 import com.senlasy.planetz.mutility.PlanetImgHelper
-import info.androidhive.fontawesome.FontTextView
 
 private const val ARG_PLANET = "planet"
 
@@ -55,7 +54,7 @@ class PlanetFactsFragment : Fragment(), PlanetFactAdapter.OnItemClickListener {
 
         imgPlanetProfile.setImageResource(PlanetImgHelper.getImageByPlanetID(planet!!.id))
         imgProfileImage.setImageResource(PlanetImgHelper.getBackgroundImageByPlanetID(planet!!.id))
-        rcyFact.layoutManager = LinearLayoutManager(activity!!, RecyclerView.VERTICAL, false)
+        rcyFact.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false)
 
         txtPlanetDescription = view.findViewById(R.id.txtPlanetDescription)
 
@@ -100,20 +99,20 @@ class PlanetFactsFragment : Fragment(), PlanetFactAdapter.OnItemClickListener {
 
     fun getData() {
         txtPlanetDescription.text = planet!!.description.toString()
-        var dbHelper = DBHelper(activity!!)
+        var dbHelper = DBHelper(requireActivity())
         var plantFact = dbHelper.getPlanetFact(planet_id = planet!!.id)
         if(plantFact.isNotEmpty()) {
-            factAdapter = PlanetFactAdapter(plantFact.toMutableList(), R.layout.item_fact, activity!!)
+            factAdapter = PlanetFactAdapter(plantFact.toMutableList(), R.layout.item_fact, requireActivity())
             factAdapter!!.setOnItemListener(this)
             rcyFact.adapter = factAdapter
         }
     }
 
     override fun onItemClick(item: PlanetFacts, view: View) {
-        Toast.makeText(activity!!, item.description, Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireActivity(), item.description, Toast.LENGTH_SHORT).show()
     }
 
-    override fun onFavItemClick(item: PlanetFacts, view: FontTextView) {
+    override fun onFavItemClick(item: PlanetFacts, view: TextView) {
         if(item.fav == 1){
             view.setTextColor(resources.getColor(android.R.color.white, null))
             item.fav = 0
@@ -122,11 +121,11 @@ class PlanetFactsFragment : Fragment(), PlanetFactAdapter.OnItemClickListener {
             item.fav = 1
         }
 
-        val dbHelper = DBHelper(activity!!)
+        val dbHelper = DBHelper(requireActivity())
         if(dbHelper.updateFavPlanet(item.id, item.fav) > 0) {
             factAdapter!!.notifyDataSetChanged()
         }
-        Toast.makeText(activity!!, item.description, Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireActivity(), item.description, Toast.LENGTH_SHORT).show()
     }
 
 
